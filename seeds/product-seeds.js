@@ -1,3 +1,4 @@
+// *given code
 const { Product } = require('../models');
 
 const productData = [

@@ -1,3 +1,4 @@
+// *given code
 const { ProductTag } = require('../models');
 
 const productTagData = [
