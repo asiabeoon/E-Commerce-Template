@@ -4,31 +4,31 @@ const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
 class ProductTag extends Model {}
-
+// through table that connects our Product and Tag models by referencing their foreign keys
 ProductTag.init(
   {
-    id: {
+    id: {//
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
       autoIncrement: true,
     },
 
-    product_id: {
+    product_id: {  // 1
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {
-        model: 'Product', // Name of the referenced model
+        model: 'product', // Name of the referenced model
         key: 'id', // Primary key of the referenced model
       }
     },
     
 
-   tag_id:{
+   tag_id:{ //3
     type: DataTypes.INTEGER,
     allowNull: false,
     references: {
-      model: 'Tag', // Name of the referenced model
+      model: 'tag', // Name of the referenced model
       key: 'id', // Primary key of the referenced model
       }
     },

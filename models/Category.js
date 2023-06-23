@@ -1,25 +1,24 @@
 // *given code--I defined columns
 const { Model, DataTypes } = require('sequelize');
-
 const sequelize = require('../config/connection.js');
+const Product = require('./Product.js');
 
 class Category extends Model {}
 
 Category.init(
   {
-    category_id: {
-    type: DataTypes.INTEGER,
-    allowNull: false,
-    primaryKey: true,
-    autoIncrement: true
-  },
-
+    id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      primaryKey: true,
+      autoIncrement: true
+    },
     category_name: {
-    type: DataTypes.STRING,
-    allowNull: false
-  }
-},   
-{
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+  },
+  {
     sequelize,
     timestamps: false,
     freezeTableName: true,
@@ -27,5 +26,7 @@ Category.init(
     modelName: 'category',
   }
 );
+
+
 
 module.exports = Category;

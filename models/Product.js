@@ -11,7 +11,7 @@ class Product extends Model {}
 Product.init(
   {
     
-    product_id: {
+   id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
@@ -24,13 +24,12 @@ Product.init(
     },  
       
     price: {
-      type: DECIMAL(10,2),
+      type: DataTypes.DECIMAL,
       allowNull: false,
       validate: {
         isDecimal: true
       }
     },
-
     stock: {
       type: DataTypes.INTEGER,
       allowNull: false,
@@ -43,8 +42,8 @@ Product.init(
     category_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      0references: {
-      model: 'Category',
+       references: {
+      model: 'category',
       key: 'id'
     }
   }

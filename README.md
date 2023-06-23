@@ -130,7 +130,7 @@ Your database should contain the following four models, including the requiremen
   
     * Doesn't allow null values.
   
-    * Set as prima ry key.
+    * Set as primary key.
   
     * Uses auto increment.
 
