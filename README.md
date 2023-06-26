@@ -69,12 +69,11 @@ DELETE /products/:id - Delete a single product by ID.
 
 ## Credits
 
-Tutor: Robby Kurle 
-<a href="https://chat-gpt.org/chat/">CHAT GPT</a>
+Tutor: Robby Kurle,  
+<a href="https://chat-gpt.org/chat/">CHAT GPT</a>, 
 UPenn Activities: 14, Mini Project 28
 
 
-If you followed tutorials, include links to those here as well.
 
 ## License
 
